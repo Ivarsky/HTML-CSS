@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example keppcoding</title>
+</head>
+
+<body>
+    <p>Hello world!!</p>
+    <!-- Mi comentario
+    En varias lineas.-->
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>heading 5</h5>
+    <h6>Heading 6</h6>
+    <!-- p -->
+
+    <p>
+        Estoy estudiando HTML y CSS en <strong>Keepcoding</strong>. De 7:00 a 23:00 .
+    </p>
+    <p>
+        last p tag
+    </p>
+    <!-- inline-block tags -->
+    <i>Italic text</i>
+    <em>Em text</em>
+    <b>Bold text</b>
+    <strong>Strong Text</strong>
+
+    <!-- 
+        div 
+        es solo un bloque de contenido sin contenido semántico,
+        no tiene por que ser un párrafo, luego se le dará estilo con CSS 
+    -->
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem optio quam commodi temporibus! Commodi eaque
+        fugit, adipisci eveniet quod cum? Optio voluptate est ullam accusamus reprehenderit laboriosam laborum deserunt
+        voluptatibus!
+    </div>
+
+    <!--
+        span
+        igual que el div pero trabaja solo en lineas, no en bloques
+    -->
+    <div>
+        <h2>Contact</h2>
+        <p>Call: <span>+123456789</span></p>
+    </div>
+
+    <!-- 
+        hr
+        separador de contenidos 
+    -->
+    <hr>
+    <!--
+        br
+        Salto de línea entre texto
+        Es una mala práctica usarla en algo que no es un salto de línea real
+    -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore reiciendis nihil odio temporibus corrupti
+        doloremque ipsam. Ea ad ab asperiores quasi repellendus sit libero quaerat soluta exercitationem. Voluptates,
+        optio culpa.
+    </div>
+    <hr>
+    <!-- list -->
+    <!-- ul, unordered list, listas desordenadas-->
+    <ul>
+        <li>HTML CSS</li>
+        <li>
+            Javascript 0
+            <ol>
+                <li>Variables</li>
+                <li>Condicionales</li>
+                <li>Funciones</li>
+            </ol>
+        </li>
+        <li>Nodejs</li>
+    </ul>
+    <!-- ol, ordered list, listas ordenadas(numeradas)-->
+    <ol type="A">
+        <li>HTML CSS</li>
+        <li>Javascript 0</li>
+        <li>Nodejs</li>
+    </ol>
+
+    <!-- links -->
+    <div>
+        <h4>Apple</h4>
+        <ul>
+            <li>
+                <!-- Tag a, anchore, para crear enlaces-->
+                <!-- target= _blank, hace que al clicar el link abra otra pestaña -->
+                <a href="https://www.apple.com/store" target="_blank">Store</a>
+            </li>
+            <li>
+                <!--rel:noreferrer, no deja saber desde donde se ha llegado al darle al link-->
+                <!--rel:noopener, no manda la navegacion interna realizada en la pagina de origen a la pagina destino-->
+                <a href="https://www.apple.com/mac/" rel="noreferrer noopener">Mac</a>
+            </li>
+            <li>
+                <!-- 
+                    mailto: haria que al clicar se abra el menu para 
+                    seleccionar una app del sistema para enviar mail
+                -->
+                <a href="mailto:test@test.com">support</a>
+            </li>
+            <li>
+                <!-- navegacion absoluta, poniendo / entre comillas y VScode te guia,
+                es mejor usar la relativa "contact/en/contact.html"-->
+                <a href="/day1/contact/en/contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
