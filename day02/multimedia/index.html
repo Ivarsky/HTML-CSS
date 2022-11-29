@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Example</title>
+</head>
+
+<body>
+    <h1>Multimedia</h1>
+    <!-- images, importar imagenes-->
+    <img src="https://pngset.com/images/html-css-icon-html-css-logo-label-text-symbol-sticker-transparent-png-505239.png"
+        alt="html css icon" width="150px" title="html logo">
+    <!-- alt, texto si la imagen no carga bien
+        width, ancho en pixeles
+        title, texto al hacer mouseover en la imagen-->
+    <hr>
+    <!--videos,
+    controls, añade los controles de video
+    autoplay, pues eso
+    muted, video muteado
+    poster, imagen de miniatura antes de reproducir el video-->
+    <video autoplay controls muted
+        poster="https://pngset.com/images/html-css-icon-html-css-logo-label-text-symbol-sticker-transparent-png-505239.png"
+        src="video/graphs-business.webm">
+        <!-- si se tiene el video en otro formato, de esta forma selecionandolo con el source 
+        y poniendo su tipo con ¨type¨, consigues implementarlo-->
+        <source src="video/graphs-bussines.mp4" type="mp4">
+    </video>
+    <!--audio, iagual que video, pero no coje el poster-->
+    <audio autoplay controls uted src="video/graphs-business.webm">
+        <source src="video/graphs-bussines.mp4" type="mp4">
+    </audio>
+
+    <!-- iframe, permite embeber ontenido externo en nuestra web, se puede usar para videos, maps, -->
+    <iframe src="https://keepcoding.io/" width="600px" height="600px" frameborder="0"></iframe>
+    <hr>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rmVCtZrtvgA" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+</body>
+
+</html>
