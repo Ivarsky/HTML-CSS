@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Formularios -->
+    <h1>Form Example</h1>
+    <!--direccion de destino al completar el formulario-->
+    <form action="registro-completado.html" method="post">
+        <!-- method: post, usar siempre que se trabaje con informacion sensible para que no se muestre en el historial-->
+        <div>
+            <label for="mail">Email</label>
+            <!-- Texto descriptivo para la caja del form -->
+            <input name="correo" id="mail" type="email" placeholder="Add your Email">
+            <!-- Tipo de entrada que espera -->
+            <!-- Placeholder, texto premuestra dentro de la caja -->
+
+
+        </div>
+        <!-- Metiendolos en divs podemos maquetarlos de forma vertical en vez de horizontal-->
+        <div>
+            <label for="pass">Password</label>
+            <input name="pwd" id="pass" type="password" placeholder="Add your Password">
+            <!-- Al poner etiqueta name nos aseguramos que la informacion del form se envia correctamente-->
+            <!--usa siempre el input correcto-->
+        </div>
+        <input type="submit" value="Enviar">
+        <!-- Input: Submit, Se comporta como un boton-->
+        <button>Registrar</button><!-- Texto para el boton -->
+    </form>
+
+</body>
+
+</html>
