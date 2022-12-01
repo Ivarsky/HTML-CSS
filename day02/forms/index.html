@@ -12,21 +12,23 @@
     <!-- Formularios -->
     <h1>Form Example</h1>
     <!--direccion de destino al completar el formulario-->
-    <form action="registro-completado.html" method="post">
-        <!-- method: post, usar siempre que se trabaje con informacion sensible para que no se muestre en el historial-->
+    <form novalidate action="registro-completado.html" method="post">
+        <!-- method: post, usar siempre que se trabaje con informacion sensible para que no se muestre en el historial
+        novalidate, no hace la validacion -->
         <div>
             <label for="mail">Email</label>
             <!-- for, Texto descriptivo para la caja del form -->
-            <input name="correo" id="mail" type="email" placeholder="Add your Email">
+            <input required name="correo" id="mail" type="email" placeholder="Add your Email">
             <!-- id, poner IDs UNICOS, para que los distintos elementos interactuen correctamente -->
             <!-- type, Tipo de entrada que espera -->
             <!-- Placeholder, texto premuestra dentro de la caja -->
+            <!-- Required, hace que esa opcion deba estar seleccionada o llena para poder enviar -->
 
             <!-- Metiendolos en divs podemos maquetarlos de forma vertical en vez de horizontal-->
         </div>
         <div>
             <label for="pass">Password</label>
-            <input name="pwd" id="pass" type="password" placeholder="Add your Password">
+            <input required name="pwd" id="pass" type="password" placeholder="Add your Password">
             <!-- Al poner etiqueta name nos aseguramos que la informacion del form se envia correctamente-->
             <!--usa siempre el input correcto-->
         </div>
@@ -66,7 +68,7 @@
                 <label for="spam">Subscribe to my newsletter</label>
             </div>
             <div>
-                <input type="checkbox" name="terms" id="termAndConditions" checked>
+                <input required type="checkbox" name="terms" id="termAndConditions" checked>
                 <label for="termsAndConditions">Accept terms and conditions</label>
             </div>
             <div>
@@ -80,7 +82,8 @@
 
         <label for="bio">Add your bio</label>
         <!-- textarea, rectangulo para textos largos con buena visibilidad -->
-        <textarea name="bio" id="bio" cols="30" rows="10">Este texto equivale al value</textarea>
+        <textarea minlength="10" name="bio" id="bio" cols="30" rows="10">Este texto equivale al value</textarea>
+        <!-- minlength, maxlength texto minimo o maximo a escribir -->
         <!-- select, menu desplegable-->
         <div>
             <select name="ciudad" id="ciudad">
@@ -90,6 +93,11 @@
                 <option value="cdmx">CDMX</option>
             </select>
         </div>
+
+        <label for="phone">phone</label>
+        <!--pattern, el estilo de input que queremos, solo numeros o letra intercalada etc...-->
+        <input type="tel" name="phone" id="phone" pattern="[0-9]+">
+
         <hr>
         <input type="submit" value="Enviar">
         <!-- Input: Submit, Se comporta como un boton de envio-->
