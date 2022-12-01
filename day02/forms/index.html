@@ -16,23 +16,84 @@
         <!-- method: post, usar siempre que se trabaje con informacion sensible para que no se muestre en el historial-->
         <div>
             <label for="mail">Email</label>
-            <!-- Texto descriptivo para la caja del form -->
+            <!-- for, Texto descriptivo para la caja del form -->
             <input name="correo" id="mail" type="email" placeholder="Add your Email">
-            <!-- Tipo de entrada que espera -->
+            <!-- id, poner IDs UNICOS, para que los distintos elementos interactuen correctamente -->
+            <!-- type, Tipo de entrada que espera -->
             <!-- Placeholder, texto premuestra dentro de la caja -->
 
-
+            <!-- Metiendolos en divs podemos maquetarlos de forma vertical en vez de horizontal-->
         </div>
-        <!-- Metiendolos en divs podemos maquetarlos de forma vertical en vez de horizontal-->
         <div>
             <label for="pass">Password</label>
             <input name="pwd" id="pass" type="password" placeholder="Add your Password">
             <!-- Al poner etiqueta name nos aseguramos que la informacion del form se envia correctamente-->
             <!--usa siempre el input correcto-->
         </div>
+
+        <!-- fieldset, Crea una seccion aparte en la que agrupa contenido dentro de una "caja"-->
+        <fieldset>
+            <!-- Haciendo el juego de poner el mismo for e id al clicar en los nombres se marca el circulo-->
+            <legend>Fav programming lang</legend>
+            <label for="js">Javascript</label>
+            <input type="radio" id="js" name="favLang" value="javascript">
+            <label for="python">Python</label>
+            <input type="radio" id="python" name="favLang" value="python">
+            <label for="net">.NET</label>
+            <input type="radio" id="net" name="favLang" value="net">
+            <!-- Al usar el mismo name en todos conseguimos que solo se pueda seleccionar una opcion y no todas a la vez -->
+            <!-- Value, el nombre del valor que esta enviando -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Skill</legend>
+            <!-- lo mismo pero con checkbox, solo si el type es radio es cuando se 
+                puede hacer que solo deje seleccionar 1 opcion con los mismos names -->
+            <input type="checkbox" id="skilljs" name="skill" value="javascript">
+            <label for="skilljs">Javascript</label>
+            <input type="checkbox" id="skillpython" name="skill" value="python">
+            <label for="skillpython">Python</label>
+            <input type="checkbox" id="skillnet" name="skill" value="net">
+            <label for="skillnet">.NET</label>
+            <!-- invirtiendo el orden de label e input se altera el orden en el que se muestra en web -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Privacy</legend>
+            <div>
+                <!-- checked, preseleccionado -->
+                <input type="checkbox" name="spam" id="spam" checked>
+                <label for="spam">Subscribe to my newsletter</label>
+            </div>
+            <div>
+                <input type="checkbox" name="terms" id="termAndConditions" checked>
+                <label for="termsAndConditions">Accept terms and conditions</label>
+            </div>
+            <div>
+                <label for="range">range</label>
+            </div>
+            <!--range, barrita de "volumen"-->
+            <div>
+                <input type="range" name="range" id="range">
+            </div>
+        </fieldset>
+
+        <label for="bio">Add your bio</label>
+        <!-- textarea, rectangulo para textos largos con buena visibilidad -->
+        <textarea name="bio" id="bio" cols="30" rows="10">Este texto equivale al value</textarea>
+        <!-- select, menu desplegable-->
+        <div>
+            <select name="ciudad" id="ciudad">
+                <!-- el value a mandar es el de la option -->
+                <option value="mad">Barcelona</option>
+                <option value="bcn">Reikiavik</option>
+                <option value="cdmx">CDMX</option>
+            </select>
+        </div>
+        <hr>
         <input type="submit" value="Enviar">
-        <!-- Input: Submit, Se comporta como un boton-->
-        <button>Registrar</button><!-- Texto para el boton -->
+        <!-- Input: Submit, Se comporta como un boton de envio-->
+        <button type="submmit">Registrar</button><!-- boton, las librerias hacen mas facil estilar button-->
     </form>
 
 </body>
