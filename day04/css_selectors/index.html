@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+    <!-- siempre dentro de style -->
+    <style>
+        /* Selector de clase*, Selecciona todos los elementos que tengan el mismo atributo class */
+        .title {
+            color: black;
+            font-style: italic;
+        }
+
+        /*Con este ejemplo seleccionamos un elemento con clase title dentro de otro elemento con clase container */
+        .container .title {
+            font-style: normal;
+        }
+
+        /* Selector de etiqueta, Todos los h1 tendrian ese estilo */
+        h1 {
+            color: red;
+        }
+
+        /* 
+        Selector de id, selecciona el elemento con esa id, maxima prioridad, como LA ID DEBE SER UNICA 
+        por lo tanto es usado para dar estilo a elementos unicos */
+        #header-1 {
+            color: blue;
+        }
+    </style>
+    <!-- Lo ideal es tener un archivo a parte y meterlo en link SIEMPRE EN HEADER -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Hello world</h1>
+        <h1>Keepcoding class</h1>
+    </div>
+    <div>
+        <h1 class="title">Header modificado con class</h1>
+        <h1 id="header-1" style="color: green;">Header with ID</h1><!-- CSS in line, muy mala practica -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+:root {
+    /*
+    definimos el color en variables dentro de :root
+    */
+    --main-color: #4C4AE6;
+    font-size: 16px;
+}
+
+.btn {
+    /*
+    luego vamos usando var(--nombre-variable) para colocar el color
+    */
+    background-color: var(--main-color);
+}
+
+footer {
+    /* background-color: rgb(255, 160, 255);*/
+    background-color: var(--main-color);
+    color: #FFF;
+    /*color: rgba(0, 0, 0, 1);*/
+    text-align: center;
+    font-style: italic;
+    /*
+    usando em, rem usa el font size declarado en root o la etiqueta superiorS
+    em es relativo a la etiqueta dentro de la que esta el elemento
+    rem es relativo a root
+    */
+    font-size: 2rem;
+    /*
+    padding
+    T -R - B - L
+    */
+    padding: 20px 0 20px 0;
+
+    /*
+    Y(top/bottom) - X(left/right)
+    */
+    padding: 20px 0px;
+}
