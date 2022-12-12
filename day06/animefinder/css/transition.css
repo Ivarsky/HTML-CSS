@@ -1,0 +1,48 @@
+/* elegimos el font size inicial y con transition definimos
+que va a transicionar, durante cuanto, y elegimos linear */
+.navbar h1 {
+    font-size: 1.2rem;
+    /* poniendo otro valor a transicionar despues de una coma
+    podemos transicionar varias cosas al mismo tiempo */
+    transition: font-size .2s linear, color .2s linear;
+}
+
+/* como el hover solo funciona en modo desktop nos aseguramos
+mediante mediaquery que la transicion esta funcionando
+cuando esta en modo desktop */
+@media screen and (min-width: 768px) {
+
+    /* para poder hacer la transicion durante el hover
+    elegimos el fontsize que va a tener al hacer hover */
+    .navbar>h1:hover {
+        cursor: pointer;
+        color: red;
+        font-size: 1rem;
+    }
+}
+
+/* asi conseguimos transicionar de forma fluida entre dos estados*/
+
+/* 1. definimos la animacion eligiendo los distintos estados clave
+en el porcentaje de duracion de la animacion */
+
+@keyframes example {
+    0% {
+        width: 20%;
+    }
+
+    50% {
+        width: 80%;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+/* usamos la animacion en alguna id */
+#animate {
+    animation: example 10s;
+    /* podemos elegir la cantidad de veces que se repite, en este caso infinito */
+    animation-iteration-count: infinite;
+}
