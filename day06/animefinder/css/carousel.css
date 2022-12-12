@@ -1,0 +1,33 @@
+.carousel-links {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-dot {
+    background-color: #000;
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+    /* tenemos que indicarle que funcione como un bloque para poder visualizarlo si no tiene contenido */
+    display: block;
+    border-radius: 50%;
+}
+
+.carousel-slides {
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+}
+
+/* al usar el simbolo > lo aplicamos a los divs que estan justo
+en el nivel debajo de la clase, se usa sobretodo en listas */
+.carousel-slides>div {
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(68, 68, 68);
+}
