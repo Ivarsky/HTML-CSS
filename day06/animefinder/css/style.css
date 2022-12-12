@@ -6,6 +6,12 @@
     font-size: 16px;
 }
 
+body {
+    /* elegimos la misma familia de fuentes para que pueda usar la segunda o la tercera en caso de no poder usar la primera */
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .btn {
     /*
     luego vamos usando var(--nombre-variable) para colocar el color
