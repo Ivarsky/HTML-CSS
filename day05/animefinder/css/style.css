@@ -1,0 +1,118 @@
+:root {
+    /*
+    definimos el color en variables dentro de :root
+    */
+    --main-color: #4C4AE6;
+    font-size: 16px;
+}
+
+.btn {
+    /*
+    luego vamos usando var(--nombre-variable) para colocar el color
+    */
+    background-color: var(--main-color);
+}
+
+footer {
+    /* background-color: rgb(255, 160, 255);*/
+    background-color: var(--main-color);
+    color: #FFF;
+    /*color: rgba(0, 0, 0, 1);*/
+    text-align: center;
+    font-style: italic;
+    /*
+    usando em, rem usa el font size declarado en root o la etiqueta superiorS
+    em es relativo a la etiqueta dentro de la que esta el elemento
+    rem es relativo a root
+    */
+    font-size: 2rem;
+    /*
+    padding
+    T -R - B - L
+    */
+    padding: 20px 0 20px 0;
+    /*
+    se puede escribir asi tmb
+    padding: 20px 0;
+    padding: 20px;
+    padding-top: 40px; elijiendo la posicion especifica
+    */
+
+    /* border 
+    solid es el tipo de borde
+    */
+    border: 2px solid red;
+    /* border radius
+    Suaviza las esquinas del borde
+    con borde radius al 50% podriamos crear una elipsis*/
+    border-radius: 5%;
+    /*
+    margin
+    se configurar igual que el padding con todas sus opciones
+    */
+    margin: 60px 20px 0 20px;
+
+    /*
+    Y(top/bottom) - X(left/right)
+    */
+    padding: 20px 0px;
+}
+
+
+.main {
+    /*
+    al poner width50% y margin auto, el navegador configura todo para dejar el texto centrado y 
+    el ancho del parrafo se ajusta solo.
+    */
+    width: 50%;
+    margin: 0 auto;
+}
+
+.main {
+    /*
+    tambien se puede poner un max width para que a partir de ciertos pixeles no siga creciendo a lo ancho el parrafo
+    para no empeorar la lectura con pantallas muy anchas
+    */
+    width: 90%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+
+#nombre {
+    /* convierte el elemento en un bloque, ocuparia todo el ancho de pantalla, en su propia linea separado del resto */
+    display: block;
+
+    /* tambien es un bloque pero esta incluido en la linea, da bastantes problemas  */
+    display: inline-block;
+
+    /* Se usa para ocultar cosas */
+    display: none;
+}
+
+/* navbar */
+.navbar {
+    background-color: var(--main-color);
+    color: #FFF;
+}
+
+/* asi aplicaria a todo elemento de clase link, QUE ESTE DENTRO de todo elemento de clase navbar */
+.navbar a.navbar_link {
+    display: none;
+}
+
+/*media querys*/
+/* creamos la condicion media query, en este caso a partir de 546px entra a funcionar el css de abajo en vez del de arriba */
+@media screen and (min-width: 546px) {
+
+    /*CSS de ancho > 546px*/
+    .navbar a.navbar_link {
+        /* los links son siempre inline-block */
+        display: inline-block;
+        color: #FFF;
+    }
+}
+
+/* podemos usarlas por tipos, screen seria para modo pantalla y print para cuandos e usa el modo impresion */
+
+@media print {}

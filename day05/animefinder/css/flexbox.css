@@ -1,0 +1,75 @@
+.container {
+    background-color: blue;
+    /*
+    con el % los hacemos con respecto del elemento de donde esta, 
+    en este caso seria el 100% del elemento MAIN, no de la pantalla
+    */
+    width: 100%;
+    /* el vh es porcentaje tambien, pero en este caso es el de la pantalla, no del elemento 
+    vh, viewport height, wh viewport width*/
+    height: 70vh;
+    /* muevo todos los elementos interiores a posicion horizontal y vertical con display:flex */
+    display: flex;
+    /* con justify content center las muevo en el eje horizontal, en este caso las pone al centro del bloque,
+    se puede poner al final con flex-end por ejemplo*/
+    justify-content: center;
+    /* con space-between, metemos todos el espacio disponible entre los items, 
+    expandiendose o contrayendose segun se modifica el contenedor 
+    tambien esta space-around o space-evenly */
+    justify-content: space-between;
+    /* con align item las puedo mover en el eje vertical, en este caso las pone en el centro
+     se puede poner abajo del todo(end vertical) con flex-end*/
+    align-items: center;
+    /* con flex-wrap:wrap le indicamos que si la pantalla es tan peque que los elementos se aplastan reconfigura los elementos
+    interiores colocandolos en otra disposicion para no deformarlos */
+    flex-wrap: wrap;
+    /* con flex-direction indicamos el orden como queremos mostrarlo, en este caso, row reverse indica que empieza por
+    el item 6 hasta el 1, se puede usar column verticales y horizontales  */
+    flex-direction: row-reverse;
+    /* basicamente display:flex nos permite activar la utilizacion de las opciones de justify-content, align-items o mas */
+}
+
+.item {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+}
+
+.navbar {
+    background-color: var(--main-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/*
+ul {
+    border: 1px solid red;
+}
+
+h1 {
+    border: 1px solid red;
+}
+
+ para evitar repetir codigo podemos ponerlo asi*/
+h1,
+ul {
+    border: 1px solid red;
+}
+
+.navbar .list {
+    display: flex;
+}
+
+.navbar .list .list-item a {
+    margin-left: 10px;
+    /*text decoration referencia al subrayado en los links*/
+    text-decoration: none
+}
+
+.navbar .list .list-item a,
+.navbar {
+    color: #fff;
+}
